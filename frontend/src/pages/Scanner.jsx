@@ -1,4 +1,4 @@
-
+﻿
 import { useEffect, useRef, useState } from "react";
 import {
   UploadCloud,
@@ -20,7 +20,7 @@ import { Link } from "react-router-dom";
 import { getDiseaseGuidance } from "../data/diseaseGuidance";
 import "./Scanner.css";
 
-const API_URL = "http://127.0.0.1:8000/predict";
+const API_URL = "https://leafguard-ai-backend-btk9.onrender.com/predict";
 const HISTORY_KEY = "leafguard_scan_history";
 const MAX_FILE_SIZE = 10 * 1024 * 1024;
 
@@ -239,7 +239,7 @@ export default function Scanner() {
               <UploadCloud size={25} />
               <div>
                 <h2>Upload Leaf Image</h2>
-                <p>JPG, PNG, or WebP • Maximum 10 MB</p>
+                <p>JPG, PNG, or WebP â€¢ Maximum 10 MB</p>
               </div>
             </div>
 
@@ -494,3 +494,4 @@ export default function Scanner() {
     </main>
   );
 }
+
