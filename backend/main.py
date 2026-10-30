@@ -22,7 +22,6 @@ from fastapi.middleware.cors import CORSMiddleware
 ROOT = Path(__file__).resolve().parent.parent
 
 MODEL_PATH = ROOT / "models" / "cnn_best.keras"
-
 CLASSES_PATH = ROOT / "results" / "class_names.json"
 
 
@@ -38,14 +37,15 @@ app = FastAPI(
 
 
 # ==========================================
-# 3. ENABLE CORS FOR REACT
+# 3. ENABLE CORS FOR REACT AND VERCEL
 # ==========================================
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "http://127.0.0.1:5173"
+        "http://127.0.0.1:5173",
+        "https://leaf-guard-ai-woad.vercel.app"
     ],
     allow_credentials=False,
     allow_methods=["*"],
@@ -84,7 +84,6 @@ else:
     raise ValueError("Invalid class_names.json format")
 
 
-# Check model output classes
 if len(class_names) != model.output_shape[-1]:
     raise ValueError(
         "Class names do not match model outputs"
@@ -114,7 +113,6 @@ def home():
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
 
-    # Check supported image formats
     if file.content_type not in (
         "image/jpeg",
         "image/png",
@@ -126,11 +124,7 @@ async def predict(file: UploadFile = File(...)):
         )
 
     try:
-
-        # ----------------------------------
         # STEP A: READ IMAGE
-        # ----------------------------------
-
         content = await file.read()
 
         if len(content) > 10 * 1024 * 1024:
@@ -145,19 +139,15 @@ async def predict(file: UploadFile = File(...)):
                 detail="Uploaded image is empty"
             )
 
-        # ----------------------------------
         # STEP B: PREPROCESS IMAGE
-        # ----------------------------------
-
         image = Image.open(
             BytesIO(content)
         ).convert("RGB")
 
         image = image.resize((224, 224))
 
-        # Model already contains Rescaling(1/255)
+        # Model already contains Rescaling(1/255).
         # Do not divide pixel values by 255 again.
-
         image_array = np.asarray(
             image,
             dtype=np.float32
@@ -168,19 +158,13 @@ async def predict(file: UploadFile = File(...)):
             axis=0
         )
 
-        # ----------------------------------
         # STEP C: RUN CNN PREDICTION
-        # ----------------------------------
-
         predictions = model.predict(
             image_array,
             verbose=0
         )[0]
 
-        # ----------------------------------
         # STEP D: GET HIGHEST PREDICTION
-        # ----------------------------------
-
         predicted_id = int(
             np.argmax(predictions)
         )
@@ -193,10 +177,7 @@ async def predict(file: UploadFile = File(...)):
             predictions[predicted_id]
         )
 
-        # ----------------------------------
         # STEP E: PRINT TOP 5 PREDICTIONS
-        # ----------------------------------
-
         top_5_indices = np.argsort(
             predictions
         )[-5:][::-1]
@@ -226,25 +207,18 @@ async def predict(file: UploadFile = File(...)):
             flush=True
         )
 
-        # ----------------------------------
         # STEP F: EXTRACT PLANT AND DISEASE
-        # ----------------------------------
-
         plant, _, disease = (
             predicted_class.partition("___")
         )
 
-        # ----------------------------------
         # STEP G: RETURN PREDICTION TO REACT
-        # ----------------------------------
-
         return {
             "plant": plant.replace("_", " "),
             "disease": disease.replace("_", " "),
             "predicted_class": predicted_class,
 
             # Confidence on a 0-1 scale
-            # React multiplies by 100 for display.
             "confidence": round(confidence, 4),
 
             "warning": (
