@@ -1,0 +1,15 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #09090f;
+}
+
+button,
+input {
+  font-family: inherit;
+}

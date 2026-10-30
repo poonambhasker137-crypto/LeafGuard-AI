@@ -1,0 +1,368 @@
+
+.tech-page {
+  min-height: 100vh;
+  background: #09090f;
+  color: #f5efff;
+}
+
+.tech-container {
+  width: min(1150px, 90%);
+  margin: 0 auto;
+}
+
+.tech-hero {
+  padding: 95px 0 90px;
+  text-align: center;
+  background: radial-gradient(
+    ellipse at top,
+    #42205f 0%,
+    #171020 55%,
+    #09090f 100%
+  );
+}
+
+.tech-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 17px;
+  border: 1px solid #67498b;
+  background: #291b39;
+  border-radius: 30px;
+  color: #c9a6ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.tech-hero h1 {
+  max-width: 900px;
+  margin: 26px auto 18px;
+  font-size: clamp(38px, 5vw, 64px);
+  letter-spacing: -2px;
+}
+
+.tech-hero h1 span {
+  background: linear-gradient(90deg, #a26cff, #dbbaff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.tech-hero p {
+  max-width: 650px;
+  margin: 0 auto 26px;
+  color: #b5a5c6;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.tech-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border-radius: 11px;
+  background: linear-gradient(135deg, #a064ff, #7132db);
+  color: white;
+  font-weight: 800;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.tech-content {
+  padding: 65px 0 100px;
+}
+
+.tech-section-heading {
+  max-width: 690px;
+  margin-bottom: 32px;
+}
+
+.tech-section-heading > span {
+  color: #bd91ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.tech-section-heading h2 {
+  margin: 12px 0;
+  font-size: clamp(28px, 4vw, 39px);
+}
+
+.tech-section-heading p {
+  color: #ad9dbe;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.tech-spaced {
+  margin-top: 85px;
+}
+
+.tech-workflow-grid,
+.tech-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.tech-workflow-card,
+.tech-stack-card {
+  padding: 27px;
+  border: 1px solid #493359;
+  border-radius: 17px;
+  background: #1a1424;
+  transition: 0.2s;
+}
+
+.tech-workflow-card:hover,
+.tech-stack-card:hover {
+  transform: translateY(-3px);
+  border-color: #9461d1;
+}
+
+.tech-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tech-card-top > span {
+  color: #735c88;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.tech-icon {
+  display: grid;
+  place-items: center;
+  width: 53px;
+  height: 53px;
+  border-radius: 13px;
+  background: #39244d;
+  color: #c59aff;
+}
+
+.tech-workflow-card h3,
+.tech-stack-card h3 {
+  margin: 22px 0 10px;
+  color: white;
+  font-size: 18px;
+}
+
+.tech-workflow-card p,
+.tech-stack-card p {
+  margin: 0;
+  color: #ad9dbe;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.tech-cnn-panel {
+  padding: 30px;
+  border: 1px solid #58406e;
+  border-radius: 18px;
+  background: #1a1424;
+}
+
+.tech-cnn-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #c59aff;
+  margin-bottom: 32px;
+}
+
+.tech-cnn-header h3 {
+  margin: 0 0 7px;
+  color: white;
+  font-size: 21px;
+}
+
+.tech-cnn-header p {
+  margin: 0;
+  color: #a99ab9;
+  font-size: 12px;
+}
+
+.tech-cnn-stages {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.tech-cnn-stage {
+  padding: 22px;
+  background: #281b37;
+  border: 1px solid #4f3666;
+  border-radius: 13px;
+}
+
+.tech-cnn-stage-number {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #6b3ca5;
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.tech-cnn-stage h4 {
+  margin: 17px 0 9px;
+  font-size: 14px;
+}
+
+.tech-cnn-stage p,
+.tech-cnn-note {
+  color: #b5a6c6;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.tech-cnn-note {
+  margin: 24px 0 0;
+}
+
+.tech-stack-card > span {
+  display: block;
+  margin-top: 18px;
+  color: #b98aff;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.tech-stack-card h3 {
+  margin-top: 8px;
+}
+
+.tech-facts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.tech-fact {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 25px;
+  border: 1px solid #493359;
+  border-radius: 16px;
+  background: #1a1424;
+  color: #c59aff;
+}
+
+.tech-fact strong {
+  color: white;
+  font-size: 26px;
+}
+
+.tech-fact span {
+  color: #ad9dbe;
+  font-size: 12px;
+}
+
+.tech-limitation {
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+  margin-top: 30px;
+  padding: 25px;
+  border: 1px solid #7b5867;
+  border-radius: 14px;
+  background: #2a202c;
+  color: #e6b99d;
+}
+
+.tech-limitation svg {
+  flex-shrink: 0;
+}
+
+.tech-limitation h3 {
+  margin: 0 0 10px;
+  color: #f5d4bc;
+  font-size: 17px;
+}
+
+.tech-limitation p {
+  margin: 0;
+  color: #d6bfbf;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.tech-capabilities {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.tech-capabilities > div {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 17px;
+  background: #1a1424;
+  border: 1px solid #493359;
+  border-radius: 11px;
+  color: #d6c8e2;
+  font-size: 13px;
+}
+
+.tech-capabilities svg {
+  flex-shrink: 0;
+  color: #b88aff;
+}
+
+.tech-bottom-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 45px;
+}
+
+.tech-bottom-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 14px 20px;
+  background: #2b1c3d;
+  border: 1px solid #624382;
+  border-radius: 10px;
+  color: #d1adff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+@media (max-width: 950px) {
+  .tech-workflow-grid,
+  .tech-stack-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tech-cnn-stages,
+  .tech-facts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .tech-workflow-grid,
+  .tech-stack-grid,
+  .tech-cnn-stages,
+  .tech-facts-grid,
+  .tech-capabilities {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-cnn-panel {
+    padding: 20px;
+  }
+}

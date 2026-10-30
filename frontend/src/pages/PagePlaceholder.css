@@ -1,0 +1,83 @@
+
+.placeholder-page {
+  min-height: calc(100vh - 75px);
+  background: radial-gradient(
+    ellipse at top,
+    #29163e 0%,
+    #130e1c 48%,
+    #09090f 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  color: #ffffff;
+}
+
+.placeholder-card {
+  max-width: 650px;
+  width: 100%;
+  padding: 55px 35px;
+  text-align: center;
+  background: rgba(28, 19, 42, 0.9);
+  border: 1px solid #593879;
+  border-radius: 22px;
+  box-shadow: 0 20px 70px rgba(100, 45, 170, 0.15);
+}
+
+.placeholder-icon {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 25px;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  background: #38234f;
+  color: #c79aff;
+}
+
+.placeholder-badge {
+  display: inline-block;
+  color: #c49bff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.placeholder-card h1 {
+  font-size: clamp(30px, 5vw, 45px);
+  margin: 0 0 18px;
+  letter-spacing: -1px;
+}
+
+.placeholder-card p {
+  color: #b9a9ca;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+
+.placeholder-home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: 11px;
+  background: linear-gradient(135deg, #a064ff, #7132db);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  transition: transform 0.2s;
+}
+
+.placeholder-home-btn:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+  .placeholder-card {
+    padding: 40px 22px;
+  }
+}

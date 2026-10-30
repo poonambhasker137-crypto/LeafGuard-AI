@@ -1,0 +1,402 @@
+
+.care-page {
+  min-height: 100vh;
+  background: #09090f;
+  color: #f5efff;
+}
+
+.care-container {
+  width: min(1120px, 90%);
+  margin: 0 auto;
+}
+
+.care-hero {
+  padding: 105px 0 100px;
+  text-align: center;
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    #442163 0%,
+    #171020 55%,
+    #09090f 88%
+  );
+}
+
+.care-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 17px;
+  border: 1px solid #67498b;
+  background: #291b39;
+  border-radius: 30px;
+  color: #c9a6ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.care-hero h1 {
+  font-size: clamp(40px, 6vw, 70px);
+  letter-spacing: -2px;
+  line-height: 1.15;
+  margin: 28px 0 20px;
+}
+
+.care-hero h1 span {
+  background: linear-gradient(90deg, #a26cff, #dbbaff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.care-hero p {
+  max-width: 610px;
+  margin: 0 auto 30px;
+  color: #b6a6c6;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.care-primary,
+.care-cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #a064ff, #7132db);
+  color: white;
+  padding: 15px 23px;
+  border-radius: 11px;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.care-explorer {
+  padding: 85px 0 100px;
+}
+
+.care-heading {
+  max-width: 650px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.care-heading > span,
+.care-cta > div > span {
+  color: #b990ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.care-heading h2 {
+  font-size: clamp(29px, 4vw, 43px);
+  letter-spacing: -1px;
+  margin: 13px 0;
+}
+
+.care-heading p {
+  color: #a99bb9;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.care-plant-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin-bottom: 35px;
+}
+
+.care-plant-buttons button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 19px;
+  background: #201729;
+  color: #c0b0d1;
+  border: 1px solid #4a365d;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.care-plant-buttons button:hover {
+  border-color: #a16cfa;
+}
+
+.care-plant-buttons button.active {
+  color: white;
+  background: #6533a6;
+  border-color: #b184ff;
+}
+
+.care-selected {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 23px;
+  padding: 25px;
+  background: linear-gradient(110deg, #2a193b, #171020);
+  border: 1px solid #634381;
+  border-radius: 17px;
+}
+
+.care-selected-icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 15px;
+  background: #43275f;
+  color: #d2acff;
+}
+
+.care-selected span {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #c39bff;
+}
+
+.care-selected h3 {
+  margin: 5px 0;
+  font-size: 26px;
+}
+
+.care-selected p {
+  color: #b5a5c5;
+  font-size: 13px;
+  margin: 0;
+}
+
+.care-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.care-info-card {
+  padding: 29px;
+  background: #191321;
+  border: 1px solid #3c2b4b;
+  border-radius: 17px;
+  transition: 0.2s;
+}
+
+.care-info-card:hover {
+  transform: translateY(-3px);
+  border-color: #8e5dc4;
+}
+
+.care-info-icon {
+  display: grid;
+  place-items: center;
+  width: 51px;
+  height: 51px;
+  border-radius: 12px;
+  background: #342346;
+  color: #c59aff;
+  margin-bottom: 19px;
+}
+
+.care-info-card h3 {
+  font-size: 18px;
+  margin: 0 0 12px;
+}
+
+.care-info-card p {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #b9a9c9;
+  margin: 0;
+}
+
+.care-checklist-section {
+  padding: 95px 0;
+  background: #120e1b;
+  border-top: 1px solid #31223e;
+  border-bottom: 1px solid #31223e;
+}
+
+.care-checklist {
+  max-width: 820px;
+  margin: auto;
+  padding: 33px;
+  background: #1e1529;
+  border: 1px solid #634382;
+  border-radius: 19px;
+}
+
+.care-checklist-top,
+.care-checklist-top > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.care-checklist-top {
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.care-checklist-top svg {
+  color: #bd91ff;
+}
+
+.care-checklist-top h3 {
+  font-size: 19px;
+  margin: 0;
+}
+
+.care-checklist-top strong {
+  color: #c79eff;
+  font-size: 13px;
+}
+
+.care-progress-track {
+  height: 9px;
+  background: #3b2b4c;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 26px;
+}
+
+.care-progress-track div {
+  height: 100%;
+  background: linear-gradient(90deg, #8d4ee8, #c393ff);
+  border-radius: inherit;
+  transition: width 0.3s ease;
+}
+
+.care-tasks {
+  display: grid;
+  gap: 12px;
+}
+
+.care-task {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 17px;
+  background: #261c32;
+  border: 1px solid #453353;
+  border-radius: 11px;
+  color: #d4c5e3;
+  text-align: left;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.care-task svg {
+  flex-shrink: 0;
+  color: #816a98;
+}
+
+.care-task.done {
+  background: #352249;
+  border-color: #9b6ce0;
+}
+
+.care-task.done svg {
+  color: #c69bff;
+}
+
+.care-task.done span {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.care-success {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  color: #d2b4ff;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.care-bottom {
+  padding: 80px 0 100px;
+}
+
+.care-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  max-width: 820px;
+  margin: 0 auto 70px;
+  padding: 20px;
+  background: #29202b;
+  border: 1px solid #594452;
+  border-radius: 13px;
+  color: #ddbfaa;
+}
+
+.care-notice svg {
+  flex-shrink: 0;
+}
+
+.care-notice p {
+  font-size: 12px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.care-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 45px;
+  background: linear-gradient(120deg, #2a1940, #181020);
+  border: 1px solid #624185;
+  border-radius: 20px;
+}
+
+.care-cta h2 {
+  font-size: 29px;
+  margin: 12px 0;
+}
+
+.care-cta p {
+  font-size: 13px;
+  color: #b5a5c5;
+}
+
+.care-cta a {
+  flex-shrink: 0;
+}
+
+@media (max-width: 650px) {
+  .care-hero {
+    padding: 70px 0;
+  }
+
+  .care-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .care-checklist {
+    padding: 20px;
+  }
+
+  .care-checklist-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .care-cta {
+    padding: 26px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .care-selected {
+    padding: 18px;
+  }
+}
